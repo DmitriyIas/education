@@ -5,5 +5,4 @@ public class Main {
         Runner runner = new Runner();
         runner.getRun();
     }
-
 }

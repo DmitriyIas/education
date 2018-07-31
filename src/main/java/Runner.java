@@ -1,26 +1,28 @@
-import MinMaxAvgNumber.MinMaxAvgNumber;
-import PalindromeVerification.PalindromeVerification;
-import StringReverse.StringReverse;
+import minMaxAvgNumber.MinMaxAvgNumber;
+import palindromeVerification.PalindromeVerification;
+import stringReverse.StringReverse;
 
 import java.util.Scanner;
 
+import static minMaxAvgNumber.MinMaxAvgNumber.minMaxAvgCalculation;
+import static palindromeVerification.PalindromeVerification.verification;
+import static stringReverse.StringReverse.useReverse;
+
 class Runner {
     void getRun() {
-        PalindromeVerification palindrome = new PalindromeVerification();
-        MinMaxAvgNumber number = new MinMaxAvgNumber();
-        StringReverse line = new StringReverse();
-        System.out.println("Enter exercise you want to run: \n palindrome \n number \n reverse");
+
+        System.out.println("Enter the number of exercise you want to run: \n1 - palindrome \n2 - number \n3 - reverse");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
 
-        if ("palindrome".equals(input)) {
-            palindrome.verification();
+        if ("1".equals(input)) {
+            verification();
 
-        } else if ("number".equals(input)) {
-            number.minMaxAvgCalculation();
+        } else if ("2".equals(input)) {
+            minMaxAvgCalculation();
 
-        } else if ("reverse".equals(input)) {
-            line.useReverse();
+        } else if ("3".equals(input)) {
+            useReverse();
 
         }
 
