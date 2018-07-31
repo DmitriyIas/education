@@ -1,9 +1,4 @@
-import minMaxAvgNumber.MinMaxAvgNumber;
-import palindromeVerification.PalindromeVerification;
-import stringReverse.StringReverse;
-
 import java.util.Scanner;
-
 import static minMaxAvgNumber.MinMaxAvgNumber.minMaxAvgCalculation;
 import static palindromeVerification.PalindromeVerification.verification;
 import static stringReverse.StringReverse.useReverse;
