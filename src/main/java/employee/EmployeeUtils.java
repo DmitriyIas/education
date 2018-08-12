@@ -23,7 +23,6 @@ public class EmployeeUtils {
         for (int i = 0; i < employeeData.size(); i++){
             String[] arr = employeeData.get(i).split(",");
             employees.add(new Employee(arr[0],arr[1],arr[2],arr[3]));
-            System.out.println(employees.get(i));
         }
 
        return employees;
