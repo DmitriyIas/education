@@ -30,11 +30,4 @@ public class EmployeeUtils {
 
     }
 
-    public static void main(String[] args) throws IOException {
-        readFromFile(FILE_PATH);
-    }
-
-
-
-
 }
