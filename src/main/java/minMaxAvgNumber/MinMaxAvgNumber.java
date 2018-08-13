@@ -28,18 +28,18 @@ public class MinMaxAvgNumber {
 
     private static int getMaximum(Integer[] arr) {
         int max = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (max < arr[i])
-                max = arr[i];
+        for (int i : arr) {
+            if (max < i)
+                max = i;
         }
         return max;
     }
 
     private static int getMinimum(Integer[] arr) {
         int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (min > arr[i])
-                min = arr[i];
+        for (int i : arr) {
+            if (min > i)
+                min = i;
         }
         return min;
 
@@ -47,8 +47,8 @@ public class MinMaxAvgNumber {
 
     private static int getAverage(Integer[] arr) {
         int avg = 0;
-        for (int i = 0; i < arr.length; i++) {
-            avg += arr[i];
+        for (int i : arr) {
+            avg += i;
         }
         avg /= arr.length;
         return avg;

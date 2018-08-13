@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class PalindromeVerification {
 
 
+
+    private PalindromeVerification(){}
+
     public static void verification() {
 
         String word = inputWord();

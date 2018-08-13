@@ -3,7 +3,7 @@ package employee;
 import org.joda.time.DateTime;
 
 
-public class Employee {
+public class Employee extends EmployeeUtils {
 
     private Integer id;
     private String firstName;
@@ -50,7 +50,7 @@ public class Employee {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
+                ", dateOfBirth=" + dateOfBirth.toString(DATE_PATTERN) +
                 "} \n";
     }
 }

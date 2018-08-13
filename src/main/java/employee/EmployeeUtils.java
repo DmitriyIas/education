@@ -3,6 +3,7 @@ package employee;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.util.List;
 public class EmployeeUtils {
 
     private final static String FILE_PATH = "src/main/resources/employees.csv";
-    private static final String DATE_PATTERN = "dd/MM/yyyy";
+    static final String DATE_PATTERN = "dd/MM/yyyy";
 
     private static List<Employee> readFromFile(String filePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));

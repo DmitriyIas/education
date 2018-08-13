@@ -5,6 +5,7 @@ import static palindromeVerification.PalindromeVerification.verification;
 import static stringReverse.StringReverse.useReverse;
 
 class Runner {
+
     void getRun() {
 
         System.out.println("Enter the number of exercise you want to run: \n1 - palindrome \n2 - number \n3 - reverse");
