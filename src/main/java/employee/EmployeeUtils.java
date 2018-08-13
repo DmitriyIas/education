@@ -37,7 +37,6 @@ public class EmployeeUtils {
         return Integer.parseInt(id);
     }
 
-
     public static void main(String[] args) throws IOException {
         readFromFile(FILE_PATH);
     }
