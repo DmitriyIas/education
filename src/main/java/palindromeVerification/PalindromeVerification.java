@@ -25,7 +25,7 @@ public class PalindromeVerification {
     private static boolean isPalindrome(String word) {
         boolean isPalindrome = true;
         char[] wordArr = word.toCharArray();
-        for (int i = 0, j = wordArr.length-1; i < wordArr.length; i++){
+        for (int i = 0, j = wordArr.length-1; i < j; i++){
             if (wordArr[i] != wordArr[j--]){
                 isPalindrome = false;
                 break;

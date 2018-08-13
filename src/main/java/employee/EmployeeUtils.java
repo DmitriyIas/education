@@ -1,5 +1,9 @@
 package employee;
 
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,24 +13,34 @@ import java.util.List;
 public class EmployeeUtils {
 
     private final static String FILE_PATH = "src/main/resources/employees.csv";
+    private static final String DATE_PATTERN = "dd/MM/yyyy";
 
     private static List<Employee> readFromFile(String filePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
-        String line;
-        List<String> employeeData = new ArrayList<String>();
         List<Employee> employees = new ArrayList<Employee>();
+        String line;
 
         while ((line = reader.readLine()) != null) {
-            employeeData.add(line);
+            String[] arr = line.split(",");
+            employees.add(new Employee(convertId(arr[0]), arr[1], arr[2], convertStringToDate(arr[3])));
         }
+        System.out.println(employees.toString());
+        return employees;
 
-        for (int i = 0; i < employeeData.size(); i++){
-            String[] arr = employeeData.get(i).split(",");
-            employees.add(new Employee(arr[0],arr[1],arr[2],arr[3]));
-        }
+    }
 
-       return employees;
+    private static DateTime convertStringToDate(String date) {
+        DateTimeFormatter format = DateTimeFormat.forPattern(DATE_PATTERN);
+        return format.parseDateTime(date);
+    }
 
+    private static Integer convertId(String id) {
+        return Integer.parseInt(id);
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        readFromFile(FILE_PATH);
     }
 
 }
