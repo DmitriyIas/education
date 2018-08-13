@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 import static minMaxAvgNumber.MinMaxAvgNumber.minMaxAvgCalculation;
 import static palindromeVerification.PalindromeVerification.verification;
 import static stringReverse.StringReverse.useReverse;
@@ -12,13 +13,10 @@ class Runner {
 
         if ("1".equals(input)) {
             verification();
-
         } else if ("2".equals(input)) {
             minMaxAvgCalculation();
-
         } else if ("3".equals(input)) {
             useReverse();
-
         }
 
     }

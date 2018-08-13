@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class PalindromeVerification {
 
+
     public static void verification() {
 
         String word = inputWord();
-        while (!"exit".equals(word)) {
+        while(!"exit".equals(word)) {
             String outputMessage = String.format("IsPalindromeResult = %s%n", Boolean.toString(isPalindrome(word)));
             System.out.println(outputMessage);
             word = inputWord();
@@ -24,8 +25,8 @@ public class PalindromeVerification {
     private static boolean isPalindrome(String word) {
         boolean isPalindrome = true;
         char[] wordArr = word.toCharArray();
-        for (int i = 0, j = wordArr.length - 1; i < wordArr.length; i++) {
-            if (wordArr[i] != wordArr[j--]) {
+        for (int i = 0, j = wordArr.length-1; i < wordArr.length; i++){
+            if (wordArr[i] != wordArr[j--]){
                 isPalindrome = false;
                 break;
             }
