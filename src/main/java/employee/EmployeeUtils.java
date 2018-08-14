@@ -15,7 +15,7 @@ import static runner.Runner.LOGGER;
 public class EmployeeUtils {
 
     private static final String FILE_PATH = "src/main/resources/employees.csv";
-    static final String DATE_PATTERN = "dd/MM/yyyy";
+    private static final String DATE_PATTERN = "dd/MM/yyyy";
 
     private static List<Employee> readFromFile(String filePath) throws IOException {
 
