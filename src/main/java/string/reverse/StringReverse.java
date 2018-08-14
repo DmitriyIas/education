@@ -1,16 +1,20 @@
-package stringReverse;
+package string.reverse;
 
 import java.util.Scanner;
 
+import static runner.Runner.LOGGER;
+
 public class StringReverse {
 
+    private StringReverse(){}
+
     public static void useReverse() {
-        String word = inputWord();
-        System.out.println(wordReverse(word));
+        String wordReverse = wordReverse(inputWord());
+        LOGGER.info(wordReverse);
     }
 
     private static String inputWord() {
-        System.out.println("Enter any word:");
+        LOGGER.info("Enter any word:");
         Scanner input = new Scanner(System.in);
         return input.nextLine();
     }
@@ -18,8 +22,8 @@ public class StringReverse {
     private static String wordReverse(String word) {
         char[] wordArr = word.toCharArray();
         char[] wordArrReverse = new char[wordArr.length];
-        for (int i = 0, j = wordArrReverse.length - 1; i < wordArr.length; i++) {
-            wordArrReverse[j--] = wordArr[i];
+        for (int i = 0, j = wordArrReverse.length - 1; i < wordArr.length; i++, j--) {
+            wordArrReverse[j] = wordArr[i];
         }
         return new String(wordArrReverse);
 
