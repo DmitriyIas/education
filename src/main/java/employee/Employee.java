@@ -46,11 +46,11 @@ public class Employee extends EmployeeUtils {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "\n Employee{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", dateOfBirth=" + dateOfBirth.toString(DATE_PATTERN) +
-                "} \n";
+                '}';
     }
 }

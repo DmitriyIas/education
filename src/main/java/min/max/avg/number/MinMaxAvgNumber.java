@@ -1,19 +1,28 @@
-package minMaxAvgNumber;
+package min.max.avg.number;
 
 import java.util.Scanner;
 
+import static runner.Runner.LOGGER;
+
 public class MinMaxAvgNumber {
+
+    private MinMaxAvgNumber() {
+    }
 
     public static void minMaxAvgCalculation() {
         Integer[] numbers = inputNumberArray();
-        System.out.println("Min - " + getMinimum(numbers));
-        System.out.println("Avg - " + getAverage(numbers));
-        System.out.println("Max - " + getMaximum(numbers));
+        String min = "Min - ".concat(String.valueOf(getMinimum(numbers)));
+        String avg = "Avg - ".concat(String.valueOf(getAverage(numbers)));
+        String max = "Max - ".concat(String.valueOf(getMaximum(numbers)));
+
+        LOGGER.info(min);
+        LOGGER.info(avg);
+        LOGGER.info(max);
 
     }
 
     private static Integer[] inputNumberArray() {
-        System.out.println("Enter space separated numbers:");
+        LOGGER.info("Enter space separated numbers:");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine().trim();
         String[] numbers = input.split(" ");
