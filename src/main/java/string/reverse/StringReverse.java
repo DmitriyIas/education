@@ -2,7 +2,7 @@ package string.reverse;
 
 import java.util.Scanner;
 
-import static runner.Runner.logger;
+import static runner.Runner.LOGGER;
 
 public class StringReverse {
 
@@ -10,11 +10,11 @@ public class StringReverse {
 
     public static void useReverse() {
         String wordReverse = wordReverse(inputWord());
-        logger.info(wordReverse);
+        LOGGER.info(wordReverse);
     }
 
     private static String inputWord() {
-        logger.info("Enter any word:");
+        LOGGER.info("Enter any word:");
         Scanner input = new Scanner(System.in);
         return input.nextLine();
     }

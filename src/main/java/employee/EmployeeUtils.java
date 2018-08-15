@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static runner.Runner.logger;
+import static runner.Runner.LOGGER;
 
 public class EmployeeUtils {
 
@@ -28,7 +28,7 @@ public class EmployeeUtils {
                 employees.add(new Employee(convertId(arr[0]), arr[1], arr[2], convertStringToDate(arr[3])));
             }
             String result = employees.toString();
-            logger.info(result);
+            LOGGER.info(result);
         } finally {
             reader.close();
         }
