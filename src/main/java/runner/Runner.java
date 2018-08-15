@@ -11,11 +11,11 @@ import static string.reverse.StringReverse.useReverse;
 
 public class Runner {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger(Runner.class);
+    public static Logger logger = LoggerFactory.getLogger(Runner.class);
 
     public void getRun() {
 
-        LOGGER.info("Enter the number of exercise you want to run: \n1 - palindrome \n2 - number \n3 - reverse");
+        logger.info("Enter the number of exercise you want to run: \n1 - palindrome \n2 - number \n3 - reverse");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
 

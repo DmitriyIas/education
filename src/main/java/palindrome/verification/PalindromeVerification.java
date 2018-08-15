@@ -2,7 +2,7 @@ package palindrome.verification;
 
 import java.util.Scanner;
 
-import static runner.Runner.LOGGER;
+import static runner.Runner.logger;
 
 public class PalindromeVerification  {
 
@@ -13,13 +13,13 @@ public class PalindromeVerification  {
         String word = inputWord();
         while(!"exit".equals(word)) {
             String outputMessage = String.format("IsPalindromeResult = %s%n", Boolean.toString(isPalindrome(word)));
-            LOGGER.info(outputMessage);
+            logger.info(outputMessage);
             word = inputWord();
         }
     }
 
     private static String inputWord() {
-        LOGGER.info("Enter any word (To exit the program, type - exit) :");
+        logger.info("Enter any word (To exit the program, type - exit) :");
         Scanner input = new Scanner(System.in);
         return input.nextLine().toLowerCase().trim().replace(" ", "");
     }

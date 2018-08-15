@@ -2,7 +2,7 @@ package min.max.avg.number;
 
 import java.util.Scanner;
 
-import static runner.Runner.LOGGER;
+import static runner.Runner.logger;
 
 public class MinMaxAvgNumber {
 
@@ -15,14 +15,14 @@ public class MinMaxAvgNumber {
         String avg = "Avg - ".concat(String.valueOf(getAverage(numbers)));
         String max = "Max - ".concat(String.valueOf(getMaximum(numbers)));
 
-        LOGGER.info(min);
-        LOGGER.info(avg);
-        LOGGER.info(max);
+        logger.info(min);
+        logger.info(avg);
+        logger.info(max);
 
     }
 
     private static Integer[] inputNumberArray() {
-        LOGGER.info("Enter space separated numbers:");
+        logger.info("Enter space separated numbers:");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine().trim();
         String[] numbers = input.split(" ");
