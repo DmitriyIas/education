@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-import static min.max.avg.number.MinMaxAvgNumber.minMaxAvgCalculation;
+import static minMaxAvgNumber.MinMaxAvgNumber.minMaxAvgCalculation;
 import static palindrome.verification.PalindromeVerification.verification;
 import static string.reverse.StringReverse.useReverse;
 
