@@ -17,6 +17,21 @@ public class Employee extends EmployeeUtils {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public DateTime getDateOfBirth() {
+        return dateOfBirth;
+    }
 
     @Override
     public boolean equals(Object obj) {
