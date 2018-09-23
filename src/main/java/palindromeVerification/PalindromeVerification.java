@@ -1,4 +1,4 @@
-package palindrome.verification;
+package palindromeVerification;
 
 import java.util.Scanner;
 

@@ -10,14 +10,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static runner.Runner.LOGGER;
-
 public class EmployeeUtils {
 
-    private static final String FILE_PATH = "src/main/resources/employees.csv";
-    private static final String DATE_PATTERN = "dd/MM/yyyy";
+    static final String DATE_PATTERN = "dd/MM/yyyy";
 
-    private static List<Employee> readFromFile(String filePath) throws IOException {
+     static List<Employee> readFromFile(String filePath) throws IOException {
 
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         List<Employee> employees = new ArrayList<Employee>();
@@ -27,8 +24,6 @@ public class EmployeeUtils {
                 String[] arr = line.split(",");
                 employees.add(new Employee(convertId(arr[0]), arr[1], arr[2], convertStringToDate(arr[3])));
             }
-            String result = employees.toString();
-            LOGGER.info(result);
         } finally {
             reader.close();
         }
@@ -46,8 +41,5 @@ public class EmployeeUtils {
         return Integer.parseInt(id);
     }
 
-    public static void main(String[] args) throws IOException {
-        readFromFile(FILE_PATH);
-    }
 
 }
