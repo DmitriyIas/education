@@ -1,4 +1,4 @@
-package min.max.avg.number;
+package minMaxAvgNumber;
 
 import java.util.Scanner;
 
