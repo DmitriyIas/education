@@ -6,11 +6,11 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Scanner;
 
-import static employee.ComparisonOfEmployeeLists.matchCriteria.MATCH;
-import static employee.ComparisonOfEmployeeLists.matchCriteria.NON_MATCH;
+import static employee.ComparisonOfEmployeeLists.MatchCriteria.MATCH;
+import static employee.ComparisonOfEmployeeLists.MatchCriteria.NON_MATCH;
 import static employee.ComparisonOfEmployeeLists.matchEmployeesFromLists;
 import static employee.ExecuteEmployee.sortEmployeesByValue;
-import static employee.comparators.CompareFactory.dataSamples.*;
+import static employee.comparators.CompareFactory.DataSamples.*;
 import static minMaxAvgNumber.MinMaxAvgNumber.minMaxAvgCalculation;
 import static palindromeVerification.PalindromeVerification.verification;
 import static stringReverse.StringReverse.useReverse;

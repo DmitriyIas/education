@@ -4,17 +4,17 @@ import employee.Employee;
 
 import java.util.Comparator;
 
-import static employee.comparators.CompareFactory.dataSamples.*;
+import static employee.comparators.CompareFactory.DataSamples.*;
 
 public class CompareFactory {
 
-    public enum dataSamples {
+    public enum DataSamples {
         DATE_OF_BIRTH,
         FULL_NAME,
         ID
     }
 
-    public static Comparator<Employee> employeeComparator(dataSamples dataSample){
+    public static Comparator<Employee> employeeComparator(DataSamples dataSample){
 
         if (dataSample.equals(DATE_OF_BIRTH)){
             return new CompareByDateOfBirth();
