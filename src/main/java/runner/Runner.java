@@ -5,10 +5,8 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Scanner;
-
-import static employee.ComparisonOfEmployeeLists.MatchCriteria.MATCH;
-import static employee.ComparisonOfEmployeeLists.MatchCriteria.NON_MATCH;
-import static employee.ComparisonOfEmployeeLists.matchEmployeesFromLists;
+import static employee.ComparisonOfEmployeeLists.getMatchEmployeesList;
+import static employee.ComparisonOfEmployeeLists.getNonMatchEmployeesList;
 import static employee.ExecuteEmployee.sortEmployeesByValue;
 import static employee.comparators.CompareFactory.DataSamples.*;
 import static minMaxAvgNumber.MinMaxAvgNumber.minMaxAvgCalculation;
@@ -45,9 +43,9 @@ public class Runner {
             } else if ("3".equals(inp)){
                 sortEmployeesByValue(DATE_OF_BIRTH);
             } else  if ("4".equals(inp)){
-                matchEmployeesFromLists(MATCH);
+                getMatchEmployeesList();
             } else if ("5".equals(inp)){
-                matchEmployeesFromLists(NON_MATCH);
+                getNonMatchEmployeesList();
             }
         }
 
