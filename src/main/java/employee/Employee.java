@@ -2,8 +2,10 @@ package employee;
 
 import org.joda.time.DateTime;
 
+import static employee.EmployeeUtils.DATE_PATTERN;
 
-public class Employee extends EmployeeUtils {
+
+public class Employee  {
 
     private Integer id;
     private String firstName;

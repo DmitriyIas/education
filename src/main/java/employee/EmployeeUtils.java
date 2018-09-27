@@ -10,14 +10,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeUtils {
+ class EmployeeUtils {
+
+    private EmployeeUtils(){}
 
     static final String DATE_PATTERN = "dd/MM/yyyy";
 
      static List<Employee> readFromFile(String filePath) throws IOException {
 
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
-        List<Employee> employees = new ArrayList<Employee>();
+        List<Employee> employees = new ArrayList<>();
         String line;
         try {
             while ((line = reader.readLine()) != null) {

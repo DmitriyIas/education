@@ -1,12 +1,25 @@
 package employee.comparators;
 
+
 import employee.Employee;
 
 import java.util.Comparator;
+import java.util.EnumMap;
+import java.util.Map;
 
-import static employee.comparators.CompareFactory.DataSamples.*;
+import static employee.comparators.CompareFactory.DataSamples.DATE_OF_BIRTH;
+import static employee.comparators.CompareFactory.DataSamples.FULL_NAME;
+import static employee.comparators.CompareFactory.DataSamples.ID;
 
 public class CompareFactory {
+
+    private static final Map<DataSamples, Comparator<Employee>> map = new EnumMap<>(DataSamples.class);
+
+    static {
+        map.put(DATE_OF_BIRTH, new CompareByDateOfBirth());
+        map.put(FULL_NAME, new CompareByFullName());
+        map.put(ID, new CompareById());
+    }
 
     public enum DataSamples {
         DATE_OF_BIRTH,
@@ -14,19 +27,8 @@ public class CompareFactory {
         ID
     }
 
-    public static Comparator<Employee> employeeComparator(DataSamples dataSample){
-
-        if (dataSample.equals(DATE_OF_BIRTH)){
-            return new CompareByDateOfBirth();
-        } else if (dataSample.equals(FULL_NAME)){
-            return new CompareByFullName();
-        } else if (dataSample.equals(ID)){
-            return new CompareById();
-        } else {
-            return null;
-        }
+    public static Comparator<Employee> employeeComparator(DataSamples dataSample) {
+        return map.get(dataSample);
     }
-
-
 
 }

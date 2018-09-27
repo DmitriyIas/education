@@ -6,7 +6,7 @@ import static runner.Runner.LOGGER;
 
 public class MinMaxAvgNumber {
 
-    private MinMaxAvgNumber() {
+    public MinMaxAvgNumber() {
     }
 
     public static void minMaxAvgCalculation() {
