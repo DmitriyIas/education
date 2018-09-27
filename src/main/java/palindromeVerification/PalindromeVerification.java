@@ -6,7 +6,9 @@ import static runner.Runner.LOGGER;
 
 public class PalindromeVerification  {
 
-    public PalindromeVerification(){}
+
+    private PalindromeVerification(){}
+
 
     public static void verification() {
 

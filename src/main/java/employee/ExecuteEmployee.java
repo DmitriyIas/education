@@ -16,7 +16,7 @@ import static runner.Runner.LOGGER;
 
 public class ExecuteEmployee {
 
-    public ExecuteEmployee(){}
+    private ExecuteEmployee(){}
 
     private static final String FILE_1_PATH = "src/main/resources/employees.csv";
 
